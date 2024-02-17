@@ -1,0 +1,105 @@
+
+{
+	
+	"title": "Theme Park Site",
+    "titleImg": "https://i.postimg.cc/7P74yZr6/park-a.png",
+    "siteLink": "#",
+    
+
+
+
+	"feature": [ 
+        {
+            "id": 1,
+			"img": "https://i.postimg.cc/28YbM7SK/Adult-Rides.png",
+			"type": "Adult rides"
+        },
+        {
+            "id": 2,
+			"img": "https://i.postimg.cc/G3GTX5dD/Family-Rides.png",
+			"type": "Family rides"
+        },
+        {
+            "id": 3,
+			"img": "https://i.postimg.cc/GtFB9HqK/Premum.png",
+			"type": "Restaurants"
+        },
+        {
+            "id": 4,
+			"img": "https://i.postimg.cc/8cQJ1hBs/Restaurants.png",
+			"type": "Premum"
+        }
+    ],
+    "address": "Address of the site",
+    "opportunity": [
+        {
+            "url": "#",
+            "type": "View opportunity on polygon"
+        }
+    ],
+    "insights": [
+        {
+            "id": 1,
+            "type": "Area",
+            "value": "200 Acres"
+        },
+        {
+            "id": 2,
+            "type": "Starting Price",
+            "value": "5 Lacks"
+        },
+        {
+            "id": 3,
+            "type": "Remaining Days",
+            "value": "10 days"
+        },
+        {
+            "id": 4,
+            "type": "Next Check",
+            "value": "2.5 years"
+        }
+    ],
+    "discriptions": [
+        {   "id": 1,
+            "type": "Overview",
+            "value": "Our AI feature simplifies your life by automating routine tasks. Spend more time on the things you love!Our AI feature simplifies your life by automating routine tasks. Spend more time on the things you love!Our AI feature simplifies your life by automating routine tasks. Spend more time on the things you love."
+        },
+        {
+            "id": 2,
+            "type": "Why?",
+            "value": "Our AI feature simplifies your life by automating routine tasks. Spend more time on the things you love!Our AI feature simplifies your life by automating routine tasks. Spend more time on the things you love!Our AI feature simplifies your life by automating routine tasks. Spend more time on the things you love."
+        },
+        {
+            "id": 3,
+            "type": "What?",
+            "value": "Our AI feature simplifies your life by automating routine tasks. Spend more time on the things you love!Our AI feature simplifies your life by automating routine tasks. Spend more time on the things you love!Our AI feature simplifies your life by automating routine tasks. Spend more time on the things you love."
+        }
+    ],
+    "landmarks": [
+        {
+            "id": 1,
+            "type": "Airport",
+            "distance": 100,
+            "name": "Airport1"
+        },
+        {
+            "id": 2,
+            "type": "Airport",
+            "distance": 25,
+            "name": "Green Which Terminia"
+        },
+        {
+            "id": 3,
+            "type": "Highway",
+            "distance": 100,
+            "name": "Highway number 5"
+        }
+    ],
+    "map":"https://i.postimg.cc/8zSqM7tv/map.png",
+    "sale": {
+        "val": 2000000,
+        "max": 6500000
+    }
+}
+    
+			
