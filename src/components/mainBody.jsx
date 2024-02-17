@@ -4,10 +4,19 @@ import { useEffect, useRef, useState} from "react";
 function MainBody({ children }) {
     const ref = useRef(null);
     const [width, setWidth] = useState(0);
-    useEffect(()=>{
-        if(ref.current && ref.current.offsetWidth)
-            setWidth(ref.current.offsetWidth);
+    // useEffect(()=>{
+    //     if(ref.current && ref.current.offsetWidth)
+    //         setWidth(ref.current.offsetWidth);
         
+    // }, []);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWidth(ref.current.offsetWidth);
+        };
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     return <div className="bg-white flex-grow flex flex-col items-center">

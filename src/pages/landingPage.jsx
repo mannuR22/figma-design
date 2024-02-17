@@ -2,7 +2,6 @@ import Content from "../components/content";
 import NavBar from "../components/NavBar";
 import Header from "../components/header";
 import MainBody from "../components/mainBody";
-import Context from '../Context';
 import data from '../assets/db.json';
 import Insight from "../components/insight";
 import ProgressBar from "../components/progressBar";
@@ -71,85 +70,84 @@ function LandingPage() {
         },
     ]);
 
-    return <Context.Provider value={data}>
-        <div className="flex w-screen flex-row gap-5px">
-            <div className="flex h-screen aspect-nav w-auto">
-                <NavBar />
-            </div>
-            <Content>
-                <Header>
-                    <button className="bg-blue-500 text-[14px] text-white font-light py-[0.9rem] px-[2rem] ">
-                        Complete Profile
-                    </button>
-                    <img src={bell} alt="bell" />
-                </Header>
-                <Header>
-                    <div className="font-bold text-[1.8rem]">Choose your new site</div>
-                    <StepComponent currStep={currStep} />
-                </Header>
-                <MainBody>
+    return <div className="flex w-screen flex-row gap-5px">
+        <div className="flex h-screen aspect-nav w-auto">
+            <NavBar />
+        </div>
+        <Content>
+            <Header>
+                <button className="bg-blue-500 text-[14px] text-white font-light py-[0.9rem] px-[2rem] ">
+                    Complete Profile
+                </button>
+                <img src={bell} alt="bell" />
+            </Header>
+            <Header>
+                <div className="font-bold text-[1.8rem]">Choose your new site</div>
+                <StepComponent currStep={currStep} />
+            </Header>
+            <MainBody>
 
-                    <Breadcrumb items={['Market', 'Category 1', 'Theme park site']} />
+                <Breadcrumb items={['Market', 'Category 1', 'Theme park site']} />
 
-                    <img className="shadow-lg" src={data.titleImg} alr="park" />
-                    
-                    <div className="bg-zinc-300 flex flex-col gap-[5px] mt-[0.8rem]">
-                        <div className="sticky top-0 z-10 mt-[5px] mx-[5px]">
-                            <div className="bg-white flex flex-row w-full h-auto justify-between items-center py-[1rem] px-[1rem]">
-                                <div className="w-2/3 h-full  flex flex-col justify-around pl-[1.2rem] items-start">
-                                    <span className="my-[0.5rem] text-[2rem] font-bold">{data.title}</span>
-                                    <div>
-                                        <div className="flex flex-row justify-start items-center py-[0.5rem] text-zinc-500">
-                                            <img src={locImg} alt="loc" />
-                                            Address of the site
-                                        </div>
-                                        <div className="flex flex-row">
-                                            {data.feature.map((f) => <Feature key={f.id} imgLink={f.img} type={f.type} />)}
-                                        </div>
+                <img className="shadow-lg" src={data.titleImg} alr="park" />
 
+                <div className="bg-zinc-300 flex flex-col gap-[5px] mt-[0.8rem]">
+                    <div className="sticky top-0 z-10 mt-[5px] mx-[5px]">
+                        <div className="bg-white flex flex-row w-full h-auto justify-between items-center py-[1rem] px-[1rem]">
+                            <div className="w-2/3 h-full  flex flex-col justify-around pl-[1.2rem] items-start">
+                                <span className="my-[0.5rem] text-[2rem] font-bold">{data.title}</span>
+                                <div>
+                                    <div className="flex flex-row justify-start items-center py-[0.5rem] text-zinc-500">
+                                        <img src={locImg} alt="loc" />
+                                        Address of the site
+                                    </div>
+                                    <div className="flex flex-row">
+                                        {data.feature.map((f) => <Feature key={f.id} imgLink={f.img} type={f.type} />)}
                                     </div>
 
-                                    <button className="text-blue-500 border-blue-500 border bg-white i flex justify-center w-auto py-[0.1rem] px-[0.9rem] items-center my-[2rem] ">
-                                        <img src={slantArrow} alt="arrow" />
-                                        <span className="relative ml-[0.8rem] underline">
-                                            View opportunity on polygon
-                                        </span>
-                                    </button>
-                                    <div className="flex flex-row my-[1rem]">
-                                        {data.insights.map((f) => <Insight key={f.id} title={f.type} value={f.value} />)}
-                                    </div>
                                 </div>
-                                <div className="w-1/3 h-full pr-[1.2rem] flex flex-col items-end justify-center">
-                                    <button className="bg-blue-500 text-[14px] mb-[0.4rem] text-white font-light py-[0.9rem] px-[4rem] ">
-                                        Complete
-                                    </button>
-                                    <button className="bg-transparent text-blue-500 font-normal text-[14px] py-[0.8rem] px-[1.3rem] border border-blue-500 flex items-center space-x-2">
-                                        <span>Site visit</span>
-                                        <span className="transition-transform duration-200 hover:scale-125">&gt;</span>
-                                    </button>
-                                    <ProgressBar val={data.sale.val} max={data.sale.max} />
-                                </div>
-                            </div>
-                        </div>
 
-                        <div className="w-full flex flex-row gap-[5px] px-[5px]">
-                            <div className="w-1/2 flex flex-col gap-[5px] overflow-auto h-full">
-                                {data.discriptions.map((d) => <Discription key={d.id} title={d.type} para={d.value} />)}
-                                <LandMarks landMarks={data.landmarks} />
-                                <Map mapURL={data.map} />
+                                <button className="text-blue-500 border-blue-500 border bg-white i flex justify-center w-auto py-[0.1rem] px-[0.9rem] items-center my-[2rem] ">
+                                    <img src={slantArrow} alt="arrow" />
+                                    <span className="relative ml-[0.8rem] underline">
+                                        View opportunity on polygon
+                                    </span>
+                                </button>
+                                <div className="flex flex-row my-[1rem]">
+                                    {data.insights.map((f) => <Insight key={f.id} title={f.type} value={f.value} />)}
+                                </div>
                             </div>
-                            <div className="w-1/2 flex flex-col gap-[5px]">
-                                {stepState.map((s) => <Step state={stepState} setState={setStepState} key={s.id} id={s.id} title={s.title} subText={s.subText} completionText={s.completionText} />)}
-                                <div className="flex-grow bg-white"></div>
+                            <div className="w-1/3 h-full pr-[1.2rem] flex flex-col items-end justify-center">
+                                <button className="bg-blue-500 text-[14px] mb-[0.4rem] text-white font-light py-[0.9rem] px-[4rem] ">
+                                    Complete
+                                </button>
+                                <button className="bg-transparent text-blue-500 font-normal text-[14px] py-[0.8rem] px-[1.3rem] border border-blue-500 flex items-center space-x-2">
+                                    <span>Site visit</span>
+                                    <span className="transition-transform duration-200 hover:scale-125">&gt;</span>
+                                </button>
+                                <ProgressBar val={data.sale.val} max={data.sale.max} />
                             </div>
                         </div>
                     </div>
 
+                    <div className="w-full flex flex-row gap-[5px] px-[5px]">
+                        <div className="w-1/2 flex flex-col gap-[5px] overflow-auto h-full">
+                            {data.discriptions.map((d) => <Discription key={d.id} title={d.type} para={d.value} />)}
+                            <LandMarks landMarks={data.landmarks} />
+                            <Map mapURL={data.map} />
+                        </div>
+                        <div className="w-1/2 flex flex-col gap-[5px]">
+                            {stepState.map((s) => <Step state={stepState} setState={setStepState} key={s.id} id={s.id} title={s.title} subText={s.subText} completionText={s.completionText} />)}
+                            <div className="flex-grow bg-white"></div>
+                        </div>
+                    </div>
+                </div>
 
-                </MainBody>
-            </Content>
-        </div>
-    </Context.Provider>
+
+            </MainBody>
+        </Content>
+    </div>;
+
 }
 
 
