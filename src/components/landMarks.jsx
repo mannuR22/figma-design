@@ -15,7 +15,7 @@ const Mark = ({type, distance, name}) => {
 }
 
 function LandMarks({landMarks}){
-    return <div className='shadow-lg bg-white w-auto h-auto py-[1rem] pb-[2.2rem] flex flex-col justify-center items-center'>
+    return <div className='shadow-lg bg-white w-auto h-auto pt-[2rem] pb-[2.5rem] flex flex-col justify-center items-center'>
         <span className='flex w-90p font-medium text-[1.4rem]'> LandMarks </span>
         <div className='w-full flex justify-center items-center flex-col'>
             {landMarks.map((l) =><Mark key={l.id} type={l.type} distance={l.distance} name={l.name} /> )}

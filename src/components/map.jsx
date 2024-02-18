@@ -1,7 +1,7 @@
 
 function Map({ mapURL }) {
 
-    return <div className="shadow-lg w-auto py-[1rem] bg-white flex flex-col justify-center items-center mb-[10rem]">
+    return <div className="shadow-lg w-auto py-[2rem] bg-white flex flex-col justify-center items-center mb-[10rem]">
         <div className="w-90p font-medium text-[1.5rem] pb-[1rem]">Maps</div>
         <div className="w-90p">
             <img className="w-full h-auto pb-[1rem]" src={mapURL} alt="map" />
